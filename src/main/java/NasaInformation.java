@@ -80,7 +80,8 @@ public class NasaInformation {
             fileOutputStream.write(inputStream.readAllBytes());
 
         }
-        System.out.println("Your file has been saved successfully! path: " + "C:\\Users\\Admin\\NasaApi" + fileName);
+        System.out.println("Your file has been saved successfully! ");
+        System.out.println("C:\\Users\\Admin\\NasaApi" + fileName);
 
     }
 }
