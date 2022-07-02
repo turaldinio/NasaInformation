@@ -71,7 +71,7 @@ public class NasaInformation {
     }
 
     public void saveInformation() throws IOException {
-        System.out.println("Starting to download your file, type is:" + media_type);
+        System.out.println("Starting to download Nasa file, type is:" + media_type);
 
         String fileName = Paths.get(new URL(hdurl).getFile()).getFileName().toString();
 
