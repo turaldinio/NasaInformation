@@ -11,9 +11,9 @@ public class NasaInformation {
     private String copyright;
     private Date date;
     private String explanation;
-    private String hdurl;
-    private String media_type;
-    private String service_version;
+    private String hdUrl;
+    private String mediaType;
+    private String serviceVersion;
     private String title;
     private String url;
 
@@ -30,9 +30,9 @@ public class NasaInformation {
         this.copyright = copyright;
         this.date = date;
         this.explanation = explanation;
-        this.hdurl = hdurl;
-        this.media_type = media_type;
-        this.service_version = service_version;
+        this.hdUrl = hdurl;
+        this.mediaType = media_type;
+        this.serviceVersion = service_version;
         this.title = title;
         this.url = url;
 
@@ -50,16 +50,16 @@ public class NasaInformation {
         return explanation;
     }
 
-    public String getHdurl() {
-        return hdurl;
+    public String getHdUrl() {
+        return hdUrl;
     }
 
-    public String getMedia_type() {
-        return media_type;
+    public String getMediaType() {
+        return mediaType;
     }
 
-    public String getService_version() {
-        return service_version;
+    public String getServiceVersion() {
+        return serviceVersion;
     }
 
     public String getTitle() {
@@ -71,11 +71,11 @@ public class NasaInformation {
     }
 
     public void saveInformation() throws IOException {
-        System.out.println("Starting to download Nasa file, type is:" + media_type);
+        System.out.println("Starting to download Nasa file, type is:" + mediaType);
 
-        String fileName = Paths.get(new URL(hdurl).getFile()).getFileName().toString();
+        String fileName = Paths.get(new URL(hdUrl).getFile()).getFileName().toString();
 
-        try (BufferedInputStream inputStream = new BufferedInputStream(new URL(hdurl).openStream());
+        try (BufferedInputStream inputStream = new BufferedInputStream(new URL(hdUrl).openStream());
              FileOutputStream fileOutputStream = new FileOutputStream(fileName)) {
             fileOutputStream.write(inputStream.readAllBytes());
 
